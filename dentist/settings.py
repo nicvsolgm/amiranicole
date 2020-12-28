@@ -30,7 +30,7 @@ SECRET_KEY = 'e2o!6flf7=#i!z&tp2r@syy_^gy0_d_aoyzf628jr*%69efl&+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['azheafaith.herokuapp.com','https://azheafaith.herokuapp.com']
 
 
 # Application definition
