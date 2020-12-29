@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Contact
+from django.http import HttpResponse
 from django.core.mail import send_mail
 # Create your views here.
 
@@ -21,16 +23,19 @@ def blog(request):
 
 def contact(request):
     if request.method == 'POST':
+        contact = Contact()
         name = request.POST['name']
         email = request.POST['email']
-        message = request.POST['message']
+        subject = request.POST['subject']
+        contact.name=name
+        contact.email = email
+        contact.subject = subject
+        contact.save()
+       # return HttpResponse("<h2>Thanks for contacting us</h2>")
+       # send_mail(
+       #     name,
+       #     email,
+       #     ['nicvsolgm@gmail.com'],
+       # )
+    return render(request, 'contact.html')
 
-        send_mail(
-            name,
-            message,
-            email,
-            ['nicvsolgm@gmail.com'],
-        )
-        return render(request, 'contact.html', {'name': name})
-    else:
-        return render(request, 'contact.html', {})
