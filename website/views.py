@@ -1,5 +1,5 @@
 from .models import Contact
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
 from blog.models import Post
 
@@ -13,7 +13,7 @@ def home(request):
             'posts': Post.objects.all(),
             'post1': Post.objects.get(pk=1),
             'post2': Post.objects.get(pk=2),
-            'post3': Post.objects.get(pk=3),
+            'post3': Post.objects.get(pk=3)
     }
 
 
