@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="{% static 'website/css/flaticon.css' %}" />
     <link rel="stylesheet" href="{% static 'website/css/icomoon.css' %}" />
     <link rel="stylesheet" href="{% static 'website/css/style.css' %}" />
+
+     <style> .test{
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+</style>
   </head>
   <body>
     <div class="hero-wrap js-fullheight"
@@ -69,6 +77,9 @@
             <li class="nav-item active">
               <a href="/" class="nav-link">Home</a>
             </li>
+            <li class="nav-item active">
+            <a class="nav-item nav-link" href="{% url 'post-list' %}">Blog</a>
+            </li>
             <li class="nav-item">
               <a href="{% url 'about' %}" class="nav-link">About</a>
             </li>
@@ -78,16 +89,14 @@
             <li class="nav-item">
               <a href="{% url 'work' %}"class="nav-link">Work</a>
             </li>
-            <li class="nav-item">
-              <a href="{% url 'blog' %}"class="nav-link">Blog</a>
-            </li>
+
             <li class="nav-item">
               <a href="{% url 'contact' %}" class="nav-link">Contact</a>
             </li>
             {% if user.is_authenticated %}
-            <!--<li class="nav-item">
-            <a class=nav-link" href="#">New Post</a>
-            </li>-->
+            <li class="nav-item">
+            <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+            </li>
             <li class="nav-item">
             <a class=" nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
@@ -106,11 +115,12 @@
         </div>
       </div>
     </nav>
+    <div class="container">
 {% block content %}
 
 
 {% endblock %}
-
+    </div>
 <footer class="ftco-footer ftco-section img">
       <div class="overlay"></div>
       <div class="container">
@@ -172,7 +182,7 @@
                 <div class="text">
                   <h3 class="heading">
                     <a href="#"
-                      >I was an amid fan of Amira Nicole for more than 12 years</a
+                      >I have been an amid fan of Amira Nicole for more than 12 years</a
                     >
                   </h3>
                   <div class="meta">

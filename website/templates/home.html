@@ -515,6 +515,9 @@
     </div>
   </div>
 </section>
+<!---<div>Recent blog</div>
+<div>{{ post1.title }}</div>
+<div>{{ post1.author }}</div>-->
 
 <section class="ftco-section">
   <div class="container">
@@ -522,8 +525,7 @@
       <div class="col-md-7 heading-section ftco-animate text-center">
         <h2 class="mb-4">Recent from blog</h2>
         <p>
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia, there live the blind texts.
+          Our way of constantly communicating with our customers
         </p>
       </div>
     </div>
@@ -533,15 +535,12 @@
           <a
             href="blog-single.html"
             class="block-20"
-            style="
-              background-image: url({% static 'website/images/image_1.jpg' %});
-            "
-          >
+            style="background-image: url({% static 'website/images/image_1.jpg' %});">
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">Sept 10, 2018</a></div>
-              <div><a href="#">Admin</a></div>
+              <div><a href="#">{{ post1.date_posted }}</a></div>
+              <div><a href="#">{{ post1.author }}</a></div>
               <div>
                 <a href="#" class="meta-chat"
                   ><span class="icon-chat"></span> 3</a
@@ -552,8 +551,7 @@
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia.
+               {{ post1.content }}
             </p>
           </div>
         </div>
@@ -570,8 +568,8 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">Sept 10, 2018</a></div>
-              <div><a href="#">Admin</a></div>
+              <div><a href="#">{{ post2.date_posted }}</a></div>
+              <div><a href="#">{{ post2.author }}</a></div>
               <div>
                 <a href="#" class="meta-chat"
                   ><span class="icon-chat"></span> 3</a
@@ -582,8 +580,7 @@
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia.
+             {{ post2.content }}
             </p>
           </div>
         </div>
@@ -600,8 +597,8 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">Sept 10, 2018</a></div>
-              <div><a href="#">Admin</a></div>
+              <div><a href="#">{{ post3.date_posted }}</a></div>
+              <div><a href="#">{{ post3.author }}</a></div>
               <div>
                 <a href="#" class="meta-chat"
                   ><span class="icon-chat"></span> 3</a
@@ -612,8 +609,7 @@
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia.
+             {{ post3.content }}
             </p>
           </div>
         </div>
