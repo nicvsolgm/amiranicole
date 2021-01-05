@@ -9,14 +9,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def home(request):
-    context = {
 
-        'posts': Post.objects.all(),
-        'post5': Post.objects.get(id=5),
-        'post6': Post.objects.get(id=6),
-        'post7': Post.objects.get(id=7)
-    }
-    return render(request, 'home.html', context)
+    return render(request, 'home.html', {})
 
 def about(request):
     return render(request, 'about.html', {})
