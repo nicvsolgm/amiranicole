@@ -1,7 +1,7 @@
 from .models import Contact
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from blog.models import Post
+from django.blog import Post
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -9,6 +9,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def home(request):
+    context = {
+            'posts': Post.objects.all(),
+            'post1': Post.objects.get(pk=1),
+            'post2': Post.objects.get(pk=2),
+            'post3': Post.objects.get(pk=3),
+    }
+
 
     return render(request, 'home.html', {})
 
