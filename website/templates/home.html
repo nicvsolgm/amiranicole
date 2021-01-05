@@ -540,19 +540,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post1.date_posted }}</a></div>
+              <div><a href="#">{{ post1.date_posted|date:"F d, Y" }}</a></div>
               <div><a href="#">{{ post1.author }}</a></div>
               <div>
-                <a href="#" class="meta-chat"
-                  ><span class="icon-chat"></span>3</a
-                >
+                <img class="test rounded-circle mx-2" src="{{ post1.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-               testing 1
+               {{ post1.content }}
             </p>
           </div>
         </div>
@@ -569,19 +567,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">2018</a></div>
-              <div><a href="#">admin</a></div>
+              <div><a href="#">{{ post2.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post2.author }}</a></div>
               <div>
-                <a href="#" class="meta-chat"
-                  ><span class="icon-chat"></span> 3</a
-                >
+                 <img class="test rounded-circle mx-2" src="{{ post2.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-             testing 2
+             {{ post2.content }}
             </p>
           </div>
         </div>
@@ -598,19 +594,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">2018</a></div>
-              <div><a href="#">admin</a></div>
+              <div><a href="#">{{ post3.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post3.author }}</a></div>
               <div>
-                <a href="#" class="meta-chat"
-                  ><span class="icon-chat"></span> 3</a
-                >
+                 <img class="test rounded-circle mx-2" src="{{ post3.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-             testing 3
+             {{ post3.content }}
             </p>
           </div>
         </div>
