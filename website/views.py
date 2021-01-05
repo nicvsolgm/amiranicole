@@ -12,9 +12,9 @@ def home(request):
     context = {
 
         'posts': Post.objects.all(),
-        'post1': Post.objects.get(id=1),
-        'post2': Post.objects.get(id=2),
-        'post3': Post.objects.get(id=3)
+        'post1': Post.objects.get(id=5),
+        'post2': Post.objects.get(id=6),
+        'post3': Post.objects.get(id=7)
     }
     return render(request, 'home.html', context)
 
