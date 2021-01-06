@@ -10,14 +10,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 def home(request):
     context = {
-            'posts': Post.objects.all(),
-            'post1': Post.objects.get(pk=1),
-            'post2': Post.objects.get(pk=2),
-            'post3': Post.objects.get(pk=3)
+        'posts': Post.objects.all(),
+        'post8': Post.objects.get(pk=8),
+        'post9': Post.objects.get(pk=9),
+        'post10': Post.objects.get(pk=10)
     }
 
-
     return render(request, 'home.html', context)
+
 
 def about(request):
     return render(request, 'about.html', {})
@@ -34,7 +34,7 @@ def work(request):
 # def create_post(request):
 #    return render(request, 'post_create.html', {})
 
-#def blog(request):
+# def blog(request):
 #    header = 'Blog'
 #    context = {
 #        'posts': Post.objects.all(),
@@ -45,21 +45,20 @@ def work(request):
 #    }
 #    return render(request, 'blog.html', context)
 
-#class PostListView(ListView):
+# class PostListView(ListView):
 #    model = Post
 #    template_name = 'website/home.html'  # <app>/<model>_<viewtype>.html
 #    context_object_name = 'posts'
 #    ordering = ['-date_posted']
 #    paginate_by = 5
 
-#class PostCreateView(LoginRequiredMixin, CreateView):
+# class PostCreateView(LoginRequiredMixin, CreateView):
 #    model = Post
 #    fields = ['title', 'content', 'picture']
 #
 #    def form_valid(self, form):
 #        form.instance.author = self.request.user
 #        return super().form_valid(form)
-
 
 
 def contact(request):
@@ -79,5 +78,3 @@ def contact(request):
     #     ['nicvsolgm@gmail.com'],
     # )
     return render(request, 'contact.html')
-
-
