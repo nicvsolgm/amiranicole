@@ -2,58 +2,72 @@
 {% load static %}
 {% block meta_description %} Beauty Salon owned by Solmayor Family {% endblock %}
 {% block content %}
-<br/>
-{% if name %}
-<center><h3>Thanks, - {{ name }} ! </h3><p>We receive your email. </p>
-</center>
-<br/></br>
-{% else %}
+
 <section class="ftco-section contact-section">
         <div class="container mt-5">
           <div class="row block-9">
-						<div class="col-md-4 contact-info ftco-animate">
-							<div class="row">
-								<div class="col-md-12 mb-4">
-		              <h2 class="h4">Contact Information</h2>
-		            </div>
-		            <div class="col-md-12 mb-3">
-		              <p><span>Address:</span> D#4 Gensoli Bldg., Burgos St., Barangay Villamonte
-					  </p>
-		            </div>
-		            <div class="col-md-12 mb-3">
-		              <p><span>Phone:</span> <a href="tel://1234567920">+63 933 069 5373</a></p>
-		            </div>
-		            <div class="col-md-12 mb-3">
-		              <p><span>Email:</span> <a href="mailto:info@yoursite.com">nicvsolgm@gmail.com</a></p>
-		            </div>
-		            <div class="col-md-12 mb-3">
-		              <p><span>Website:</span> <a href="https://nicvsolgm.wixsite.com/nvsjr">a6_coder.ml</a></p>
-		            </div>
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-            <div class="col-md-6 ftco-animate">
-              <form method="post" class="contact-form" class=" was-validated">
-				  {% csrf_token %}
-              	<div class="row">
-              		<div class="col-md-6">
-		                <div class="form-group">
-		                  <input type="text" name = 'name' class="form-control" placeholder="Your Name" required>
-		                </div>
-	                </div>
-	                <div class="col-md-6">
-		                <div class="form-group">
-		                  <input type="email" name = 'email' class="form-control" placeholder="Your Email" required>
-		                </div>
-		                </div>
-                </div>
+			  <div class="col-md-4 contact-info ftco-animate">
 
-                <div class="form-group">
-                  <textarea name="subject" id="" cols="30" rows="7" class="form-control" placeholder="Subject" required></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-                </div>
+				  <div class="row">
+					   <div class="col-md-12 mb-4">
+		                    <h2 class="h4">Contact Information</h2>
+		                </div>
+		                <div class="col-md-12 mb-3">
+		                   <p><span>Address:</span> D#4 Gensoli Bldg., Burgos St., Barangay Villamonte</p>
+		                </div>
+		                <div class="col-md-12 mb-3">
+							<p><span>Phone:</span> <a href="tel://1234567920">+63 933 069 5373</a></p>
+		                </div>
+		                <div class="col-md-12 mb-3">
+		                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">nicvsolgm@gmail.com</a></p>
+		                </div>
+		                    <div class="col-md-12 mb-3">
+		                       <p><span>Website:</span> <a href="https://nicvsolgm.wixsite.com/nvsjr">a6_coder.ml</a></p>
+		                   </div>
+				       </div>
+			       </div>
+
+				<!--		<div class="col-md-1"></div>-->
+
+			       <div class="col-md-8 ftco-animate">
+                             <div method="post" class="contact-form" class=" was-validated">
+				                 {% csrf_token %}
+                                 <div class="container">
+				                     <div class="row">
+				                         <div class="col-md-8">
+		                                    <div class="form-group">
+		                                       <input type="text" name = 'name' class="form-control" placeholder="Your Name" required>
+		                                    </div>
+	                                     </div>
+								      </div>
+						         </div>
+
+						  <div class="container">
+				   <div class="row">
+						<div class="col-md-8>
+		                   <div class="form-group">
+		                      <input type="text" name = 'phone' class="form-control" placeholder="Your Phone" required>
+		                </div>
+			       </div>
+				   </div>
+
+		           <div class="row">
+	                   <div class="col-md-8">
+		                    <div class="form-group">
+		                       <input type="email" name = 'email' class="form-control" placeholder="Your Email" required>
+		                    </div>
+		                </div>
+                  </div>
+
+                 <div class="row">
+                      <div class="form-group">
+                               <textarea name="subject" id="" cols="30" rows="7" class="form-control" placeholder="Subject" required></textarea>
+                       </div>
+                       <div class="form-group">
+                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+					   </div>
+				 </div>
+			   </div>
               </form>
             </div>
           </div>

@@ -5,12 +5,16 @@ from django.urls import reverse
 from PIL import Image
 # Create your models here.
 class Contact(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.EmailField()
-    subject = models.TextField()
+    name = models.CharField(max_length=200, default=True)
+    phone = models.CharField(max_length=11, default=True)
+    email = models.EmailField(default=True)
+    subject = models.TextField(default=True)
 
     def __str__(self):
         return self.name
+
+
+
 
 
 
