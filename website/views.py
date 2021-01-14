@@ -17,9 +17,9 @@ def home(request):
     context = {
         'form': form,
         'posts': Post.objects.all(),
-        'post8': Post.objects.get(pk=8),
-        'post9': Post.objects.get(pk=9),
-        'post10': Post.objects.get(pk=10)
+        'post1': Post.objects.get(pk=1),
+        'post2': Post.objects.get(pk=2),
+        'post3': Post.objects.get(pk=3)
     }
 
     return render(request, 'home.html', context)
@@ -37,8 +37,6 @@ def work(request):
     return render(request, 'work.html', {})
 
 
-
-
 def contact(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
@@ -47,11 +45,7 @@ def contact(request):
     context = {
         'form': form
     }
-    return render(request,"home.html",context)
-
-
-
-
+    return render(request, "home.html", context)
 
 
 #    if request.method == 'POST':
@@ -67,6 +61,3 @@ def contact(request):
 #        contact.save()
 
 #   return render(request, 'home.html')
-
-
-
