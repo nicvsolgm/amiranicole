@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block meta_description %} Beauty Salon owned by Solmayor Family {% endblock %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <section class="ftco-section contact-section">
+
         <div class="container mt-5">
           <div class="row block-9">
 			  <div class="col-md-4 contact-info ftco-animate">
@@ -26,8 +28,14 @@
 		                   </div>
 				       </div>
 			       </div>
-
-				<!--		<div class="col-md-1"></div>-->
+			  <div>
+                <form method="post">
+					{% csrf_token %}
+					{{ form\crispy }}
+					<input type="submit" value="Save" >
+				</form>
+			  </div>
+				<!--		<div class="col-md-1"></div>
 
 			       <div class="col-md-8 ftco-animate">
                              <div method="post" class="contact-form" class=" was-validated">
@@ -60,15 +68,16 @@
                   </div>
 
                  <div class="row">
-                      <div class="form-group">
+                       <div class="form-group">
                                <textarea name="subject" id="" cols="30" rows="7" class="form-control" placeholder="Subject" required></textarea>
                        </div>
                        <div class="form-group">
                              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
 					   </div>
 				 </div>
+
 			   </div>
-              </form>
+              </form>-->
             </div>
           </div>
         </div>
