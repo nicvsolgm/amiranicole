@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
 
+{% include 'head.html' %}
+{% include 'navbar.html' %}
 <section class="ftco-section">
     <div class="container">
         <div class="row">
-
             <div class="col-md-4 ftco-animate">
                          <div class="media d-block text-center block-6 services">
                              <div class="icon d-flex mb-3">
@@ -126,22 +128,6 @@
       </div>
 
     </div>
-
- <!-- </div>
-
-</section>
-
-<section class="ftco-section bg-light">
-
-  <div class="container">
-
-      <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-             <h2 class="mb-4">Our Beauty Experts</h2>
-             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-       </div> -->
-
       <div class="row">
 
         <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
@@ -210,28 +196,22 @@
 
 </section>
 
-<section
-  class="ftco-section ftco-discount img"
-  style="background-image: url({% static 'website/images/n1.jpg' %})"
->
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row justify-content-end">
-      <div class="col-md-5 discount ftco-animate">
-        <h3>Save up to 25% Off</h3>
-        <h2 class="mb-4">Student Discount</h2>
-        <p class="mb-4">
-          Our place is a walking distance to the University, and most of our customers are either students or faculty memebers,
-          that is why we give special discount to them.
-        </p>
-        <p>
-          <a href="#" class="btn btn-white btn-outline-white px-4 py-3"
-            >Book Now</a
-          >
-        </p>
-      </div>
-    </div>
-  </div>
+<section class="ftco-section ftco-discount img"
+         style="background-image: url({% static 'website/images/n1.jpg' %})">
+              <div class="overlay"></div>
+              <div class="container">
+                   <div class="row justify-content-end">
+                       <div class="col-md-5 discount ftco-animate">
+                           <h3>Save up to 25% Off</h3>
+                           <h2 class="mb-4">Student Discount</h2>
+                           <p class="mb-4">
+                           Our place is a walking distance to the University, and most of our customers are either students or faculty memebers,
+                           that is why we give special discount to them.</p>
+                           <p>
+                           <a href="#" class="btn btn-white btn-outline-white px-4 py-3">Book Now</a>
+                          </p>
+                   </div>
+               </div>
 </section>
 
 <section class="ftco-section">
@@ -249,16 +229,12 @@
     <div class="row">
       <div class="col-md-4 ftco-animate">
         <a href="#" class="work-entry">
-          <img
-            src="{% static 'website/images/work-1.jpg' %}"
+          <img src="{% static 'website/images/work-1.jpg' %}"
             class="img-fluid"
-            alt="Colorlib Template"
-          />
+            alt="Colorlib Template"/>
           <div class="info d-flex align-items-center">
             <div>
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
-              >
+              <div class="icon mb-4 d-flex align-items-center justify-content-center">
                 <span class="icon-search"></span>
               </div>
               <h3>Lips Makeover</h3>
@@ -268,16 +244,12 @@
       </div>
       <div class="col-md-4 ftco-animate">
         <a href="#" class="work-entry">
-          <img
-            src="{% static 'website/images/work-2.jpg' %}"
-            class="img-fluid"
-            alt="Colorlib Template"
-          />
+          <img src="{% static 'website/images/work-2.jpg' %}"
+               class="img-fluid"
+                alt="Colorlib Template"/>
           <div class="info d-flex align-items-center">
             <div>
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
-              >
+              <div class="icon mb-4 d-flex align-items-center justify-content-center">
                 <span class="icon-search"></span>
               </div>
               <h3>Hair Style</h3>
@@ -287,16 +259,12 @@
       </div>
       <div class="col-md-4 ftco-animate">
         <a href="#" class="work-entry">
-          <img
-            src="{% static 'website/images/work-3.jpg' %}"
-            class="img-fluid"
-            alt="Colorlib Template"
-          />
+          <img src="{% static 'website/images/work-3.jpg' %}"
+               class="img-fluid"
+               alt="Colorlib Template"/>
           <div class="info d-flex align-items-center">
             <div>
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
-              >
+              <div class="icon mb-4 d-flex align-items-center justify-content-center">
                 <span class="icon-search"></span>
               </div>
               <h3>Makeup</h3>
@@ -315,38 +283,30 @@
         <div class="row">
           <div class="col-md-3 ftco-animate">
             <a href="#" class="partner-entry">
-              <img
-                src="{% static 'website/images/partner-1.jpg' %}"
-                class="img-fluid"
-                alt="Colorlib template"
-              />
+              <img src="{% static 'website/images/partner-1.jpg' %}"
+                   class="img-fluid"
+                   alt="Colorlib template"/>
             </a>
           </div>
           <div class="col-md-3 ftco-animate">
             <a href="#" class="partner-entry">
-              <img
-                src="{% static 'website/images/partner-2.jpg' %}"
-                class="img-fluid"
-                alt="Colorlib template"
-              />
+              <img src="{% static 'website/images/partner-2.jpg' %}"
+                   class="img-fluid"
+                   alt="Colorlib template"/>
             </a>
           </div>
           <div class="col-md-3 ftco-animate">
             <a href="#" class="partner-entry">
-              <img
-                src="{% static 'website/images/partner-3.jpg' %}"
+              <img src="{% static 'website/images/partner-3.jpg' %}"
                 class="img-fluid"
-                alt="Colorlib template"
-              />
+                alt="Colorlib template"/>
             </a>
           </div>
           <div class="col-md-3 ftco-animate">
             <a href="#" class="partner-entry">
-              <img
-                src="{% static 'website/images/partner-4.jpg' %}"
+              <img src="{% static 'website/images/partner-4.jpg' %}"
                 class="img-fluid"
-                alt="Colorlib template"
-              />
+                alt="Colorlib template"/>
             </a>
           </div>
         </div>
@@ -379,9 +339,8 @@
             <li>Hair Rebond - P1500</li>
           </ul>
           <p class="button text-center">
-            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3"
-              >Order now</a
-            >
+            <a href="#"
+               class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a>
           </p>
         </div>
       </div>
@@ -396,9 +355,7 @@
             <li>Foot Spa - P250</li>
           </ul>
           <p class="button text-center">
-            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3"
-              >Order now</a
-            >
+            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a>
           </p>
         </div>
       </div>
@@ -412,9 +369,7 @@
             <li>Facial - P500</li>
           </ul>
           <p class="button text-center">
-            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3"
-              >Order now</a
-            >
+            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a>
           </p>
         </div>
       </div>
@@ -431,9 +386,7 @@
             <li>Manicure</li>
           </ul>
           <p class="button text-center">
-            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3"
-              >Order now</a
-            >
+            <a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">Order now</a>
           </p>
         </div>
       </div>
@@ -441,19 +394,15 @@
   </div>
 </section>
 
-<section
-  class="ftco-section ftco-counter img"
-  id="section-counter"
-  style="background-image: url({% static 'website/images/bg_4.jpg' %})"
->
+<section class="ftco-section ftco-counter img"
+         id="section-counter"
+         style="background-image: url({% static 'website/images/bg_4.jpg' %})">
   <div class="overlay"></div>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="row">
-          <div
-            class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
-          >
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
                 <div class="icon">
@@ -464,9 +413,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
-          >
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
                 <div class="icon">
@@ -477,9 +424,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
-          >
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
                 <div class="icon">
@@ -490,9 +435,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate"
-          >
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
                 <div class="icon">
@@ -508,9 +451,6 @@
     </div>
   </div>
 </section>
-<!---<div>Recent blog</div>
-<div>{{ post1.title }}</div>
-<div>{{ post1.author }}</div>-->
 
 <section class="ftco-section">
 
@@ -526,24 +466,23 @@
     <div class="row d-flex">
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry align-self-stretch">
-          <a
-            href="blog-single.html"
+          <a href="blog-single.html"
             class="block-20"
             style="background-image: url({% static 'website/images/image_1.jpg' %});">
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post8.date_posted|date:"F d, Y" }}</a></div>
-              <div><a href="#">{{ post8.author }}</a></div>
+              <div><a href="#">{{ post3.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post3.author }}</a></div>
               <div>
-                <img class="test rounded-circle mx-2" src="{{ post8.author.profile.image.url }}">
+                <img class="test rounded-circle mx-2" src="{{ post3.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-               {{ post8.content }}
+               {{ post3.content }}
             </p>
           </div>
         </div>
@@ -560,17 +499,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post9.date_posted|date:"F d, Y" }}</a></div>
-              <div><a href="#">{{ post9.author }}</a></div>
+              <div><a href="#">{{ post4.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post4.author }}</a></div>
               <div>
-                 <img class="test rounded-circle mx-2" src="{{ post9.author.profile.image.url }}">
+                 <img class="test rounded-circle mx-2" src="{{ post4.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-             {{ post9.content }}
+             {{ post5.content }}
             </p>
           </div>
         </div>
@@ -587,17 +526,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post10.date_posted|date:"F d, Y" }}</a></div>
-              <div><a href="#">{{ post10.author }}</a></div>
+              <div><a href="#">{{ post5.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post5.author }}</a></div>
               <div>
-                 <img class="test rounded-circle mx-2" src="{{ post10.author.profile.image.url }}">
+                 <img class="test rounded-circle mx-2" src="{{ post5.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-             {{ post10.content }}
+             {{ post5.content }}
             </p>
           </div>
         </div>
@@ -642,33 +581,7 @@
 					                {{ form.as_p }}
 				            	<input type="submit" value="Save" >
 				               </form>
-                       <!--      <form method="post" class="contact-form" class=" was-validated">
-				                {% csrf_token %}
-                            	<div class="row">
-              		                 <div class="col-md-4">
-		                                  <div class="form-group">
-		                                     <input type="text" name = 'name' class="form-control" placeholder="Your Name" required>
-		                                  </div>
-	                                 </div>
-					             	<div class="col-md-4">
-		                           <div class="form-group">
-		                                   <input type="text" name = 'phone' class="form-control" placeholder="Your Phone" required>
-		                           </div>
-	                             </div>
-	                        <div class="col-md-4">
-		                <div class="form-group">
-		                  <input type="email" name = 'email' class="form-control" placeholder="Your Email" required>
-		                </div>
-		                </div>
-                </div>
 
-                <div class="form-group">
-                  <textarea name="subject" id="" cols="30" rows="7" class="form-control" placeholder="Subject" required></textarea>
-                </div>
-                <div class="form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-                </div>
-              </form>-->
             </div>
                </div>
         </div>

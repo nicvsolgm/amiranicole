@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+{% include 'navbar.html' %}
 <div class="contaianer">
-  <div class="row">
-    <div class="col-md-12">
+  <!---<div class="row">
+   <div class="col-md-12">-->
       <div class="row gap-y">
         {% for post in posts %}
-          <div class="col-md-6" >
+          <div class="col-md-12" >
                 <article class="media content-section">
                  <img class="test rounded-circle mx-2" src="{{ post.author.profile.image.url }}">
                      <div class="media-body">
@@ -19,8 +20,8 @@
                  </article>
           </div>
         {% endfor %}
-       </div>
-     </div>
+  <!---     </div>
+     </div>-->
   </div>
 
 
