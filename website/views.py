@@ -17,9 +17,9 @@ def home(request):
     context = {
         'form': form,
         'posts': Post.objects.all(),
-        'post3': Post.objects.get(pk=3),
-        'post4': Post.objects.get(pk=4),
-        'post5': Post.objects.get(pk=5)
+        'post15': Post.objects.get(pk=15),
+        'post16': Post.objects.get(pk=16),
+        'post17': Post.objects.get(pk=17),
     }
 
     return render(request, 'home.html', context)
