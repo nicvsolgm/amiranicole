@@ -17,24 +17,24 @@ def home(request):
     context = {
         'form': form,
         'posts': Post.objects.all(),
-        'post7': Post.objects.get(pk=7),
-        'post8': Post.objects.get(pk=8),
-        'post9': Post.objects.get(pk=9),
+        'post18': Post.objects.get(pk=18),
+        'post19': Post.objects.get(pk=19),
+        'post20': Post.objects.get(pk=20),
     }
 
-    return render(request, 'home.html', context)
+    return render(request, 'website/home.html', context)
 
 
 def about(request):
-    return render(request, 'about.html', {})
+    return render(request, 'website/about.html', {})
 
 
 def services(request):
-    return render(request, 'services.html', {})
+    return render(request, 'website/services.html', {})
 
 
 def work(request):
-    return render(request, 'work.html', {})
+    return render(request, 'website/work.html', {})
 
 
 def contact(request):
@@ -45,7 +45,7 @@ def contact(request):
     context = {
         'form': form
     }
-    return render(request, "contact.html", context)
+    return render(request, "website/contact.html", context)
 
 
 #    if request.method == 'POST':
@@ -61,3 +61,6 @@ def contact(request):
 #        contact.save()
 
 #   return render(request, 'home.html')
+
+def skin(request):
+    return render(request, 'website/skin.html', {})

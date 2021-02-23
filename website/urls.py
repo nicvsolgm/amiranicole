@@ -12,6 +12,7 @@ urlpatterns = [
     #path('blog/', PostListView.as_view(), name='blog'),
     #path('blog/', views.blog, name='blog'),
     path('contact/', views.contact, name='contact'),
+    path('skin/', views.skin, name='skin'),
 
 ]
 if settings.DEBUG:

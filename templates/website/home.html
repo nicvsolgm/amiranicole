@@ -1,20 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'website/base.html' %}
 {% load static %}
 
 {% block content %}
 
-{% include 'head.html' %}
-{% include 'navbar.html' %}
+{% include 'website/head.html' %}
+{% include 'website/navbar.html' %}
 <section class="ftco-section">
     <div class="container">
         <div class="row">
             <div class="col-md-4 ftco-animate">
                          <div class="media d-block text-center block-6 services">
-                             <div class="icon d-flex mb-3">
-                                  <span class="flaticon-facial-treatment"></span>
-                             </div>
                              <div class="media-body">
-                                 <h3 class="heading">Skin &amp; Beauty Care</h3
+                                 <h3 class="heading "><a href="{% url 'skin' %}">Skin &amp; Beauty Care</a>
+                                     <div class="icon d-flex mb-3">
+                                         <span class="flaticon-facial-treatment"></span>
+                                     </div>
+                                 </h3
                                  <p>Beauty is in the skin! Take care of it, oil it, clean it, scrub
                                     it, perfume it, and put on your best clothes, even if there is no
                                     special occasion, and you'll feel like a queen. If society is hard
@@ -26,18 +27,34 @@
 
            <div class="col-md-4 ftco-animate">
                         <div class="media d-block text-center block-6 services">
-                             <div class="icon d-flex mb-3">
-                               <span class="flaticon-cosmetics"></span>
-                             </div>
-                             <div class="media-body">
-                              <h3 class="heading">Makeup Pro</h3>
-                               <p>Beneath the makeup and behind the smile I am just a girl who
+                               <div class="media-body">
+                                   <h3 class="heading"><a href="{% url 'skin' %}">Makeup Pro</a>
+                                       <div class="icon d-flex mb-3">
+                                         <span class="flaticon-cosmetics"></span>
+                                       </div>
+                                    </h3>
+                                   <p>Beneath the makeup and behind the smile I am just a girl who
                                   wishes for the world.</p>
                              </div>
                         </div>
             </div>
 
             <div class="col-md-4 ftco-animate">
+                        <div class="media d-block text-center block-6 services">
+                               <div class="media-body">
+                                   <h3 class="heading"><a href="{% url 'skin' %}">Hair Style</a>
+                                       <div class="icon d-flex mb-3">
+                                          <span class="flaticon-curl"></span>
+                                       </div>
+                                    </h3>
+                                   <p>Hairdressers are a wonderful breed. You work one on one with
+                                  another human being, and the object is to make them feel so much
+                                  better, and to look at themselves with a twinkle in their eye</p>
+                             </div>
+                        </div>
+            </div>
+
+      <!--      <div class="col-md-4 ftco-animate">
                         <div class="media d-block text-center block-6 services">
                              <div class="icon d-flex mb-3">
                                 <span class="flaticon-curl"></span>
@@ -49,7 +66,7 @@
                                   better, and to look at themselves with a twinkle in their eye</p>
                               </div>
                         </div>
-            </div>
+                 </div>-->
         </div>
     </div>
 </section>
@@ -472,17 +489,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post7.date_posted|date:"F d, Y" }}</a></div>
-              <div><a href="#">{{ post7.author }}</a></div>
+              <div><a href="#">{{ post18.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post18.author }}</a></div>
               <div>
-                <img class="test rounded-circle mx-2" src="{{ post7.author.profile.image.url }}">
+                <img class="test rounded-circle mx-2" src="{{ post18.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-               {{ post7.content }}
+               {{ post18.content }}
             </p>
           </div>
         </div>
@@ -499,17 +516,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post8.date_posted|date:"F d, Y" }}</a></div>
-              <div><a href="#">{{ post8.author }}</a></div>
+              <div><a href="#">{{ post19.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post19.author }}</a></div>
               <div>
-                 <img class="test rounded-circle mx-2" src="{{ post8.author.profile.image.url }}">
+                 <img class="test rounded-circle mx-2" src="{{ post19.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-             {{ post8.content }}
+             {{ post19.content }}
             </p>
           </div>
         </div>
@@ -526,17 +543,17 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-              <div><a href="#">{{ post9.date_posted|date:"F d, Y" }}</a></div>
-              <div><a href="#">{{ post9.author }}</a></div>
+              <div><a href="#">{{ post20.date_posted|date:"F d, Y" }}</a></div>
+              <div><a href="#">{{ post20.author }}</a></div>
               <div>
-                 <img class="test rounded-circle mx-2" src="{{ post9.author.profile.image.url }}">
+                 <img class="test rounded-circle mx-2" src="{{ post20.author.profile.image.url }}">
               </div>
             </div>
             <h3 class="heading mt-2">
               <a href="#">Skin Care for Teen Skin</a>
             </h3>
             <p>
-             {{ post9.content }}
+             {{ post20.content }}
             </p>
           </div>
         </div>
