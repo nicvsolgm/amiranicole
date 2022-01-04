@@ -14,15 +14,15 @@ def home(request):
     if form.is_valid():
         form.save()
 
-    context = {
-        'form': form,
-        'posts': Post.objects.all(),
-        'post18': Post.objects.get(pk=18),
-        'post19': Post.objects.get(pk=19),
-        'post20': Post.objects.get(pk=20),
-    }
+    #context = {
+    #    'form': form,
+    #    'posts': Post.objects.all(),
+    #    'post18': Post.objects.get(pk=18),
+    #    'post19': Post.objects.get(pk=19),
+    #    'post20': Post.objects.get(pk=20),
+    #}
 
-    return render(request, 'website/home.html', context)
+    return render(request, 'website/home.html')# context)
 
 
 def about(request):
