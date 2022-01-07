@@ -8344,7 +8344,9 @@ textarea.form-control {
       font-size: 15px; }
       .blog-entry .meta > div a:hover {
         color: #666666; }
-
+.text {
+  color:black;
+}
 .block-23 ul {
   padding: 0; }
   .block-23 ul li, .block-23 ul li > a {
@@ -8678,6 +8680,11 @@ textarea.form-control {
     color: #000;
     font-style: italic; }
 
+    .test rounded-circle{
+      height: 50px;
+      width: 50px;
+      margin-right: 20px;
+      margin-bottom: 20px;
 #ftco-loader {
   position: fixed;
   width: 96px;
